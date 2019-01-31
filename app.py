@@ -91,11 +91,11 @@ class myHandler(BaseHTTPRequestHandler):
 				self.end_headers()
 				data=f.read()
 				try:
-                                        self.wfile.write(data)
-                                except:
-                                        self.wfile.write(bytes(data, 'UTF-8'))
-				f.close()
-			return
+					self.wfile.write (data)
+				except:
+					self.wfile.write(bytes(data, 'UTF-8'))
+					f.close()
+					return
 
 
 		except IOError:
